@@ -240,7 +240,7 @@ class posts {
 
 
             if (checked) {
-                isExist.likes.pop(req.id);
+                isExist.likes.splice(req.id,1);
                 const info = await isExist.save();
                 return res.status(200).json({
                     state: "Success",
